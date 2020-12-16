@@ -29,6 +29,7 @@ vector<Course> Semester::getCourseVector()
 }
 double Semester::getSemesterGpa()
 {
+    // Reference var
     calculateGpa(semester_gpa);
     return semester_gpa;
 }
@@ -82,7 +83,7 @@ void Semester::calculateGpa(double &gpa)
     // GPA = (grades) / (# of classes)
     gpa = getTotalGrades() / getNumOfClasses();
 }
-// Filling out printReport function, formatted output
+// Filling out printReport function, FORMATTED OUTPUT TO THE CONSOLE USING STREAM MANIPULATORS
 void Semester::printReport()
 {
     cout << "=======================================================================" << endl;

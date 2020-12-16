@@ -1,3 +1,26 @@
+/*
+ * main.cpp: Program for keeping track of semesters and their corresponding classes, in addition to semester gpa and
+ * credits, and also cumulative gpa and credits
+ * Author: Cameron Colleran
+ * Module: Final Project
+ * Problem statement: Create a program which allows user to keep track of their classes taken, in which semester they were taken, in
+ * addition to their semester credits and gpa, and cumulative gpa and credits
+ *
+ * Algorithm:
+ * 1. Create classes representing a Course and Semester
+ *      Course class:
+ *          instance variables: name, description, grade, credits
+ *      Semester class:
+ *          instance variables: name, vector<Course>, semester_gpa
+ * 2. Fill those classes with appropriate functions
+ * 3. Create function in main.cpp which:
+ *      Starts loop, prompting user whether they want to view their classes or add new ones
+ *              - If they want to view, open data file (courses.csv) and input data, then display nicely to screen
+ *              - If they want to add, prompt them to add, then write to courses.csv file
+ *              - Otherwise exit the program
+ *
+ */
+
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -43,7 +66,7 @@ void launchMenu()
         // Print reports of all semesters
         if (input == "1")
         {
-            // HOOKING UP TO CSV FILE TO GET SAVED DATA (File I/O)
+            // HOOKING UP TO CSV FILE TO GET SAVED DATA (FILE I/O)
 
 
             // Creating vector of semester objects
@@ -161,7 +184,7 @@ void launchMenu()
                     cout << "Improper input, please retry" << endl;
                 }
 
-                // Prompting user to enter number of credits, making sure correct input
+                // Prompting user to enter number of credits
                 cout << "Enter number of credits course is worth: ";
                 cin >> credits;
                 total_credits += credits;
